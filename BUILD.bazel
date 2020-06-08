@@ -1,0 +1,9 @@
+# Add rules here to build your software
+# See https://docs.bazel.build/versions/master/build-ref.html#BUILD_files
+
+load("@io_bazel_rules_docker//nodejs:image.bzl", "nodejs_image")
+
+nodejs_image(
+    name = "hello",
+    entry_point = ":hello.js",
+)
